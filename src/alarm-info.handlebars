@@ -1,0 +1,16 @@
+<div class="row description">
+  <div class="column">
+    <table>
+      {{#each this}}
+      <table class="fields">
+        <thead>
+          <tr>
+            <th class="headerFields" colspan="2">{{@key}}</th>
+          </tr>
+        </thead>
+        {{&Dive this}}
+      </table>
+      {{/each}}
+    </table>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+{
+  "extends": "google",
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "require-jsdoc": "off",
+    "new-cap": "off",
+    "max-len": ["error", {"code": 120}],
+    "arrow-parens": ["error", "as-needed"]
+  }
+}

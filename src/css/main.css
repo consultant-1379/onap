@@ -1,0 +1,203 @@
+html {
+  color: #222;
+  line-height: 1.4;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.7em;
+}
+
+table {
+  table-layout: fixed;
+}
+
+td{
+  word-wrap: break-word;
+}
+
+h1 {
+  padding: 50px 0 0 0;
+  font-family: Tajawal, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  color: #545454;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 300px;
+}
+
+.domain-filter {
+  width: 100%;
+  margin: 8px auto;
+  color: white;
+}
+
+label {
+  border-radius: 999px;
+  padding: 10px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.checkbox-unselected {
+  opacity: 0.3;
+}
+
+.container {
+  min-height: calc(100vh - 156px);
+}
+
+.footer {
+  text-align: center;
+  margin: 50px;
+}
+
+.footer hr {
+  margin-top: 0;
+}
+
+.row {
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .row {
+    flex-direction: row;
+  }
+}
+
+.fields tbody {
+  display: none;
+}
+
+.headerFields {
+  background-color: rgb(245, 245, 245);
+}
+
+.indent1 {
+  text-indent: 75px;
+}
+
+.indent2 {
+  text-indent: 150px;
+}
+
+.indent3 {
+  text-indent: 225px;
+}
+
+.indent4 {
+  text-indent: 300px;
+}
+
+.indent5 {
+  text-indent: 375px;
+}
+
+.indent6 {
+  text-indent: 450px;
+}
+
+.container .layerFieldStart {
+  background-color: rgb(225, 235, 245);
+}
+
+.refresh-rate {
+  color: #333;
+  display: inline-block;
+  width: 20%
+}
+
+.time-range {
+  color: #333;
+}
+
+.time-input {
+  width: 49%;
+  display: inline-block;
+}
+
+/*
+  ありがとうございますよ！！！
+          <3 Dara
+*/
+
+/* Colours */
+:root {
+  --dark-green: #145b06;
+  --red: #e32219;
+  --yellow: #fabb00;
+  --orange: #ff7300;
+  --blue: #0050d1;
+  --white: #fffcf9;
+  --green: #129912;
+  --purple: #431096;
+  --maroon: #870909;
+  --teal: #2f9da3;
+  --dark-grey: #444444;
+}
+
+.fault, .heartbeat, .measurementsforvfscaling, .mobileflow, .other, .sipsignaling, .statechange, .syslog, .thresholdcrossingalert, .voicequality {
+  color: var(--white);
+}
+
+.container .fault {
+  background-color: var(--dark-grey);
+  width: 19%;
+}
+
+.container .heartbeat {
+  background-color: var(--red);
+    width: 19%;
+}
+.container .measurementsforvfscaling {
+  background-color: var(--yellow);
+    width: 25%;
+}
+.container .mobileflow {
+  background-color: var(--blue);
+    width: 19%;
+}
+.container .other {
+  background-color: var(--orange);
+    width: 19%;
+}
+.container .sipsignaling {
+  background-color: var(--green);
+    width: 19%;
+}
+.container .statechange {
+  background-color: var(--purple);
+    width: 19%;
+}
+.container .syslog {
+  background-color: var(--maroon);
+    width: 19%;
+}
+.container .thresholdcrossingalert {
+  background-color: var(--teal);
+      width: 25%;
+}
+.container .voicequality {
+  background-color: var(--dark-green);
+    width: 19%;
+}
+
+.description {
+  border: 1px solid black;
+  color: darkslategrey;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 0.8em;
+}
+
+.description table tbody td {
+  padding: 0 8px;
+}

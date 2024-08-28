@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ves-viewer
+  labels:
+    app: ves-viewer
+spec:
+  containers:
+    - name: ves-viewer
+      image: 10.209.57.232/fortress/ves_alv
+      ports:
+        - containerPort: 4400
+      env:
+        - name: VES_TOPIC
+          value: "unauthenticated.SEC_FAULT_OUTPUT"
+        - name: TIMEOUT
+          value: "15000"
+  nodeSelector:
+    ves_viewer_node="true"

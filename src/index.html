@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+
+  <title>VES Event Viewer</title>
+
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tajawal">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css"/ >
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h1>ONAP VES Event List Viewer</h1>
+  <div class="row domain-filter" onclick="handleDomainClick(event.target)" ondblclick="handleDomainDoubleClick(event.target.id)">
+    <label id="fault-label" for="fault" class="fault domain-checkbox column">
+      <input type="checkbox" id="fault" checked>Fault <span id="fault-count">(...)</span>
+    </label>
+    <label id="heartbeat-label" for="heartbeat" class="heartbeat domain-checkbox column">
+      <input type="checkbox" id="heartbeat" checked>Heartbeat <span id="heartbeat-count">(...)</span>
+    </label>
+    <label id="measurementsforvfscaling-label" for="measurementsforvfscaling" class="measurementsforvfscaling domain-checkbox column">
+      <input type="checkbox" id="measurementsforvfscaling" checked>MeasurementsForVfScaling <span id="measurementsforvfscaling-count">(...)</span>
+    </label>
+    <label id="mobileflow-label" for="mobileflow" class="mobileflow domain-checkbox column">
+      <input type="checkbox" id="mobileflow" checked>MobileFlow <span id="mobileflow-count">(...)</span>
+    </label>
+    <label id="other-label" for="other" class="other domain-checkbox column">
+      <input type="checkbox" id="other" checked>Other <span id="other-count">(...)</span>
+    </label>
+    </div>
+    <div class="row domain-filter" onclick="handleDomainClick(event.target)" ondblclick="handleDomainDoubleClick(event.target.id)">
+    <label id="sipsignaling-label" for="sipsignaling" class="sipsignaling domain-checkbox column">
+      <input type="checkbox" id="sipsignaling" checked>SipSignaling <span id="sipsignaling-count">(...)</span>
+    </label>
+    <label id="statechange-label" for="statechange" class="statechange domain-checkbox column">
+      <input type="checkbox" id="statechange" checked>StateChange <span id="statechange-count">(...)</span>
+    </label>
+    <label id="thresholdcrossingalert-label" for="thresholdcrossingalert" class="thresholdcrossingalert domain-checkbox column">
+      <input type="checkbox" id="thresholdcrossingalert" checked>ThresholdCrossingAlert <span id="thresholdcrossingalert-count">(...)</span>
+    </label>
+    <label id="syslog-label" for="syslog" class="syslog domain-checkbox column">
+      <input type="checkbox" id="syslog" checked>Syslog <span id="syslog-count">(...)</span>
+    </label>
+    <label id="voicequality-label" for="voicequality" class="voicequality domain-checkbox column">
+      <input type="checkbox" id="voicequality" checked>VoiceQuality <span id="voicequality-count">(...)</span>
+    </label>
+  </div>
+
+  <img id="loading-spinner" src="img/loading-spinner.svg">
+
+  <table id="table"></table>
+  <!––div class="indent1 indent2 indent3 indent4 indent5 indent6"––>
+</div>
+
+<div class="footer">
+  <hr>
+  Made with <span style="color: #e25555;">❤</span> by Team Fortress
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="js/alarm-info.template.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+<script src="js/helper.js"></script>
+<script src="js/main.js"></script>
+<script id="dive" type="x-handlebars-template">
+    {{#each this}}
+        {{#ifObject this}}
+        <tbody class="layerStart">
+            <tr class="layerFieldStart">
+            {{#ifnNaN @key}}
+            <td colspan="2">{{@key}}</td>
+            {{/ifnNaN}}
+            </tr>
+        </tbody>
+            {{#each this}}
+                {{#ifObject this}}
+                <tbody class="subLayerFields">
+                    {{&Dive this}}
+                </tbody>
+                {{/ifObject}}
+                {{#ifnNaN @key}}
+                    <tr>
+                    <td>{{@key}}</td>
+                    <td>{{@this}}</td>
+                    </tr>
+                {{/ifnNaN}}
+            {{/each}}
+        <tbody class="layerStop">
+            <tr class="layerFieldEnd">
+            <td colspan="2">&nbsp;</td>
+            </tr>
+        </tbody>
+        {{else}}
+        {{#ifnNaN @key}}
+            <tr class="layerData">
+            <td>{{@key}}</td>
+            <td>{{@this}}</td>
+            </tr>
+        {{/ifnNaN}}
+        {{/ifObject}}
+    {{/each}}
+</script>
+
+</body>
+
+</html>

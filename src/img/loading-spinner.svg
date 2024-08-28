@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="80px"
+   height="80px"
+   viewBox="0 0 100 100"
+   preserveAspectRatio="xMidYMid"
+   class="lds-colorbar"
+   version="1.1"
+   id="svg924"
+   sodipodi:docname="loading-spinner.svg"
+   inkscape:version="0.92.3 (unknown)">
+  <metadata
+     id="metadata928">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1305"
+     inkscape:window-height="744"
+     id="namedview926"
+     showgrid="false"
+     inkscape:zoom="5.4977552"
+     inkscape:cx="13.380195"
+     inkscape:cy="43.622704"
+     inkscape:window-x="61"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g922" />
+  <defs
+     id="defs900">
+    <clipPath
+       ng-attr-id="{{config.cpid}}"
+       x="0"
+       y="0"
+       width="100"
+       height="100"
+       id="lds-colorbar-cpid-9d2a9cfa91489">
+      <path
+         d="M81.3,58.7H18.7c-4.8,0-8.7-3.9-8.7-8.7v0c0-4.8,3.9-8.7,8.7-8.7h62.7c4.8,0,8.7,3.9,8.7,8.7v0C90,54.8,86.1,58.7,81.3,58.7z"
+         id="path897" />
+    </clipPath>
+  </defs>
+  <path
+     fill="none"
+     ng-attr-stroke="{{config.cf}}"
+     stroke-width="2.7928"
+     d="M82,63H18c-7.2,0-13-5.8-13-13v0c0-7.2,5.8-13,13-13h64c7.2,0,13,5.8,13,13v0C95,57.2,89.2,63,82,63z"
+     stroke="#5d5d5d"
+     id="path902" />
+  <g
+     ng-attr-clip-path="url(#{{config.cpid}})"
+     clip-path="url(#lds-colorbar-cpid-9d2a9cfa91489)"
+     id="g922">
+    <g
+       transform="translate(10 0)"
+       id="g920">
+      <rect
+         x="-100"
+         y="0"
+         width="25"
+         height="100"
+         ng-attr-fill="{{config.c1}}"
+         fill="#f47e60"
+         id="rect904"
+         style="fill:#e32219;fill-opacity:1" />
+      <rect
+         x="-75"
+         y="0"
+         width="25"
+         height="100"
+         ng-attr-fill="{{config.c2}}"
+         fill="#f8b26a"
+         id="rect906"
+         style="fill:#ff7300;fill-opacity:1" />
+      <rect
+         x="-50"
+         y="0"
+         width="25"
+         height="100"
+         ng-attr-fill="{{config.c3}}"
+         fill="#abbd81"
+         id="rect908"
+         style="fill:#fabb00;fill-opacity:1" />
+      <rect
+         x="-25"
+         y="0"
+         width="25"
+         height="100"
+         ng-attr-fill="{{config.c4}}"
+         fill="#849b87"
+         id="rect910"
+         style="fill:#2379ff;fill-opacity:1" />
+      <rect
+         x="0"
+         y="0"
+         width="25"
+         height="100"
+         ng-attr-fill="{{config.c1}}"
+         fill="#f47e60"
+         id="rect912"
+         style="fill:#e32219;fill-opacity:1" />
+      <rect
+         x="25"
+         y="0"
+         width="25"
+         height="100"
+         ng-attr-fill="{{config.c2}}"
+         fill="#f8b26a"
+         id="rect914"
+         style="fill:#ff7300;fill-opacity:1" />
+      <rect
+         x="50"
+         y="0"
+         width="25"
+         height="100"
+         ng-attr-fill="{{config.c3}}"
+         fill="#abbd81"
+         id="rect916"
+         style="fill:#fabb00;fill-opacity:1" />
+      <rect
+         x="75"
+         y="0"
+         width="25"
+         height="100"
+         ng-attr-fill="{{config.c4}}"
+         fill="#849b87"
+         id="rect918"
+         style="fill:#2379ff;fill-opacity:0.94117647" />
+      <animateTransform
+         attributeName="transform"
+         type="translate"
+         calcMode="linear"
+         values="0;100"
+         keyTimes="0;1"
+         dur="1s"
+         begin="0s"
+         repeatCount="indefinite" />
+    </g>
+  </g>
+</svg>

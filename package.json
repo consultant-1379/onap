@@ -1,0 +1,36 @@
+{
+  "name": "onap-alarm-viewer",
+  "scripts": {
+    "build": "handlebars src/alarm-info.handlebars -f src/js/alarm-info.template.js",
+    "start": "node server.js",
+    "test": "eslint . && bash list_unused_css_classes.sh && stylelint '**/*.css' '**/*.html'"
+  },
+  "version": "0.1.0",
+  "description": "Application for viewing alarms in ONAP",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "handlebars": "^4.0.11",
+    "jquery-datetimepicker": "^2.5.20",
+    "moment": "^2.22.2",
+    "sqlite": "^2.9.2",
+    "sqlite3": "https://github.com/mapbox/node-sqlite3/tarball/master",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-recommended": "^2.0.0",
+    "husky": "^1.0.0-rc.9",
+    "stylelint": "^9.1.1",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  }
+}
